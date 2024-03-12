@@ -8,4 +8,5 @@ tests-report/
 test-reports/
 target
 .vscode/
+.idea/
 ipv6-leack-test.sh

@@ -100,11 +100,11 @@ yes
 EOF3
     # Certificate created at: /opt/Dockovpn_data/pki/issued/MyReq.crt
 
-    openvpn --genkey --secret ta.key << EOF4
+    openvpn --genkey secret ta.key << EOF4
 yes
 EOF4
 
-    easyrsa gen-crl
+    EASYRSA_CRL_DAYS=3650 easyrsa gen-crl
 
     touch $LOCKFILE
 fi
