@@ -10,12 +10,7 @@ function createConfig() {
     cd "$APP_PERSIST_DIR"
 
     # Redirect stderr to the black hole
-
-    if [ "$PASSWORD_PROTECTED" -eq 1 ]; then
-        easyrsa build-client-full "$CLIENT_ID"
-    else
-        easyrsa build-client-full "$CLIENT_ID" nopass &> /dev/null
-    fi
+    easyrsa build-client-full "$CLIENT_ID" nopass &> /dev/null
 
     # Writing new private key to '/usr/share/easy-rsa/pki/private/client.key
     # Client sertificate /usr/share/easy-rsa/pki/issued/client.crt
