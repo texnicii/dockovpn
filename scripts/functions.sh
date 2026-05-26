@@ -10,7 +10,7 @@ function createConfig() {
     cd "$APP_PERSIST_DIR"
 
     # Redirect stderr to the black hole
-    easyrsa build-client-full "$CLIENT_ID" nopass &> /dev/null
+    easyrsa --batch build-client-full "$CLIENT_ID" nopass &> /dev/null
 
     # Writing new private key to '/usr/share/easy-rsa/pki/private/client.key
     # Client sertificate /usr/share/easy-rsa/pki/issued/client.crt
