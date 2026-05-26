@@ -10,3 +10,6 @@ target
 .vscode/
 .idea/
 ipv6-leack-test.sh
+
+compose.override.yml
+.env
